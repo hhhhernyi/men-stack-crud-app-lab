@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feneral Assembly HRMS</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>All Employees</h1>
+    <p>Click on the employee to see more details</p>
+    <% for (let i=0; i<allEmployees.length; i++) { %>
+        <div class="employeeCard">
+            <p>Employee Name: <%= allEmployees[i].name %></p>
+            <p>Department: <%= allEmployees[i].department %></p>
+        <button><a href="/employee/<%= allEmployees[i]._id %>">View details</a></button>
+        <br />
+        </div>
+        
+    <% } %>
+
+    <button><a href="/employee/new">Create a new employee</a></button>
+  </body>
+</html>

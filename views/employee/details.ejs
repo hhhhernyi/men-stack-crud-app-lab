@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feneral Assembly HRMS</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= oneEmployee.name %></h1>
+    <p>Full details page</p>
+    <p>Age: <%= oneEmployee.age %> Years Old</p>
+    <p>Monthly Salary: $<%= oneEmployee.salary %></p>
+    <p>Department: <%= oneEmployee.department %></p>
+    <p>Marital Status: <%= oneEmployee.married==='Married'? 'Married': 'Not Married' %></p>
+    <div>
+        <button><a href="/employee/<%= oneEmployee._id %>/edit">Update Details</a></button>
+        
+        <form action="/employee/<%= oneEmployee._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete Employee</button>
+          </form>
+    </div>
+    
+  </body>
+</html>
