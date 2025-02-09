@@ -7,19 +7,27 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= oneEmployee.name %></h1>
-    <p>Full details page</p>
-    <p>Age: <%= oneEmployee.age %> Years Old</p>
-    <p>Monthly Salary: $<%= oneEmployee.salary %></p>
-    <p>Department: <%= oneEmployee.department %></p>
-    <p>Marital Status: <%= oneEmployee.married==='Married'? 'Married': 'Not Married' %></p>
-    <div>
-        <button><a href="/employee/<%= oneEmployee._id %>/edit">Update Details</a></button>
+    <div class="oneEmployeePage">
+      <h1><%= oneEmployee.name %></h1>
+      <div class="oneEmployeeDetails">
+        <p>Gender: <%= oneEmployee.gender %> </p>
+      <p>Age: <%= oneEmployee.age %> Years Old</p>
+      <p>Monthly Salary: $<%= oneEmployee.salary %></p>
+      <p>Department: <%= oneEmployee.department %></p>
+      <p>Marital Status: <%= oneEmployee.married==='Married'? 'Married': 'Not Married' %></p>
+      </div>
+      
+      <div class="oneEmployeePageButtons">
+        <a href="/employee/<%= oneEmployee._id %>/edit"><button class="updateDetails">Update Details</button></a>
         
         <form action="/employee/<%= oneEmployee._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete Employee</button>
-          </form>
+          <button type="submit" class="delete">Delete Employee</button>
+        </form>
+        <a href="/employee"><button>Back to all employees</button></a>
+
+      </div>
     </div>
+
     
   </body>
 </html>

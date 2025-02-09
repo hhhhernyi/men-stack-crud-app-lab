@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>Update the details for <%=oneEmployee.name%></h1>
-    <form action="/employee/<%=oneEmployee._id%>?_method=PUT" method="POST">
+    <div class="updateForm">
+      <h1>Update the details for <%=oneEmployee.name%></h1>
+    <form action="/employee/<%=oneEmployee._id%>?_method=PUT" method="POST" class="updateFormFields">
         <label for="name">Employee Name:</label>
         <input value=<%=oneEmployee.name%> type="text" name="name" id="name" />
         <br />
@@ -29,7 +30,7 @@
           </select>
         <br />
         <label for="name">Employee Monthly Salary:</label>
-        <input value=<%= oneEmployee.salary %> type="number" name="salary" id="salary" />
+        <input value=<%= oneEmployee.salary %> type="number" name="salary" id="salary" class='salary'/>
         <br />
         <label for="name">Employee Department:</label>
         <select name="department" id="department" value=<%= oneEmployee.department %>>
@@ -41,9 +42,10 @@
           </select>
         <br />
 
-        <button type="submit">Update Employee</button>
-    <br />
-    <a href="/employee"><div >Back to all employees</div></a>
+        <a><button type="submit" class="update">Update Employee</button></a>
+        <a href="/employee"><button >Back to all employees</button></a>
     </form>
+    </div>
+    
   </body>
 </html>

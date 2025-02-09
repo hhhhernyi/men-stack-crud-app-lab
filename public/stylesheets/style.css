@@ -1,8 +1,157 @@
-.employeeCard {
-    border: solid black 3px;
-    margin: 5px;
-    padding: 5px;
-}
+
 body {
-    background-color: blanchedalmond;
+    background-color: rgb(238, 201, 212);
+}
+button:hover {
+    cursor: pointer;
+}
+.landingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    background-color: rgb(235, 78, 78);
+    padding: 10px;
+    border-radius: 5px;
+}
+.homePage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.homeButtons {
+    display: flex;
+}
+.homeButtons > a > button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.homeButtons > a > button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.allEmployeesPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.allEmployeesPageTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.employeeCard {
+    display: flex;
+    flex-direction: row;
+    border: solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+}
+.male {
+    background-color: rgb(95, 160, 235);
+}
+.female {
+    background-color: #ec8eb2;
+}
+.others {
+    background-color: #929693;
+}
+.employeeCard>a>button {
+    height: 40px;
+    width: fit-content;
+    border-radius: 5px;
+}
+.employeeDetails {
+    width: 400px
+}
+
+.allEmployeesPageButtons>button {
+    margin: 10px;
+}
+.allEmployeesPageButtons {
+    display: flex;
+}
+.oneEmployeePage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oneEmployeeDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+    background-color: white;
+    height: 300px;
+    width: 300px
+}
+.oneEmployeePageButtons {
+    display: flex;
+    margin: 20px;
+}
+.oneEmployeePageButtons > a > button {
+    margin: 0 20px;
+    padding: 10px;
+}
+.updateForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.salary {
+    width: 100px;
+}
+.updateFormFields {
+    border: solid black;
+    padding: 10px;
+    background-color: rgb(194, 181, 181);
+}
+.updateForm > form > a > button {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.update {
+    background-color: green;
+}
+.create {
+    background-color: green;
+}
+.updateDetails {
+    background-color: orange;
+}
+.delete {
+    background-color: red;
+    padding: 10px;
+}
+.createForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.createFormFields {
+    border: solid black;
+    padding: 10px;
+}
+.createFormButton {
+    display: flex;
+    justify-content: space-evenly;
+}
+.createFormButton > a > button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }

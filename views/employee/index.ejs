@@ -7,18 +7,35 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>All Employees</h1>
-    <p>Click on the employee to see more details</p>
+    <div class="allEmployeesPage">
+      <div class="allEmployeesPageTitle">
+        <h1>All Employees</h1>
+        <p>Click on the employee to see more details</p>
+      </div>
+      
+
     <% for (let i=0; i<allEmployees.length; i++) { %>
-        <div class="employeeCard">
+        <div class="employeeCard <%= allEmployees[i].gender %>">
+          <div class="employeeDetails">
             <p>Employee Name: <%= allEmployees[i].name %></p>
             <p>Department: <%= allEmployees[i].department %></p>
-        <button><a href="/employee/<%= allEmployees[i]._id %>">View details</a></button>
+          </div>
+            
+        <a href="/employee/<%= allEmployees[i]._id %>"><button>View details</button></a>
         <br />
         </div>
         
     <% } %>
 
-    <button><a href="/employee/new">Create a new employee</a></button>
+    <div class="allEmployeesPageButtons">
+          <button><a href="/employee/new">Create a new employee</a></button>
+      <button><a href="/home">Back to Home</a></button>
+    </div>
+
+
+    </div>
+    
+    
+    
   </body>
 </html>
